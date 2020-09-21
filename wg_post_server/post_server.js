@@ -7,6 +7,10 @@ http.createServer(function (req, res) {
     // by default the req url is / or the root of the server
   //  var urlOBJ = new URL(req.url, 'localhost:3000');
     //    console.log(urlOBJ.toString());
+    if (req.method != "POST"){
+	res.writeHead(404);
+	res.end("ERROR This is a POST server")
+    }else{
     console.log(req.url);
     var POSTDATA = '';
     req.on('data', function (chunk) {
@@ -24,8 +28,8 @@ http.createServer(function (req, res) {
 	res.writeHead(200);
 	res.end(JSON.stringify(resOBJ));
     });
+    }
 
-    
 }).listen(3000, ()=>{
     console.log("Server is Running")
 });
