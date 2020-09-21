@@ -5,8 +5,9 @@ var wg = require('whatwg-url');
 
 http.createServer(function (req, res) {
     // by default the req url is / or the root of the server
-    var urlOBJ = wg.parseURL(req.url, 'localhost:3000');
-
+  //  var urlOBJ = new URL(req.url, 'localhost:3000');
+    //    console.log(urlOBJ.toString());
+    console.log(req.url);
     var POSTDATA = '';
     req.on('data', function (chunk) {
 	POSTDATA += chunk;

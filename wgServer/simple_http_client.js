@@ -3,7 +3,9 @@ var http = require('http');
 var options = {
     hostname: 'localhost',
     port: '3000',
-    path: '/hello.html'
+    path: '/hello.html',
+    auth: 'jake:badPassword'
+
 };
 
 function handleResponse(response) {

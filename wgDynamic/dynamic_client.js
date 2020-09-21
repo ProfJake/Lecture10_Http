@@ -1,0 +1,18 @@
+var http = require('http');
+
+var options = {
+    hostname: 'localhost',
+    port: '3000'
+};
+
+http.request( options, function(response){
+    let serverResp = '';
+    response.on('data', function(chunk) {
+	serverResp += chunk;
+    });
+
+    response.on('end', function(){
+	console.log("Response Status: " + response.statusCode);
+	console.log(serverResp);
+    });
+}).end();

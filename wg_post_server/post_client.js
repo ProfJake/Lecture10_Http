@@ -2,12 +2,13 @@ var http = require('http');
 var url = require('url');
 
 var options = {
-    host: '127.0.0.1',
-    path: '/',
+    host: '127.0.0.1',//this is the IP address that means "localhost"
+    path: '/',   
     port: '3000',
     method: 'POST'
 };
 
+//a function to read the server response
 function readJSONresp(response){
     var responseData = '';
     response.on('data', function (chunk) {
