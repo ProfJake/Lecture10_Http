@@ -1,3 +1,12 @@
+/*
+simple_http_server.js
+Jake Levy
+Sept 2020
+
+Adapted from your text NodeJS, Mongo, and Angular Development.
+
+ A simple GET server that serves up static html files.
+*/
 var fs = require('fs');
 var http = require('http');
 var wg = require('whatwg-url');

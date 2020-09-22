@@ -1,3 +1,10 @@
+/*simple_http_client.js
+Jake Levy
+Sept 2020
+
+A simple client program that can make a GET request.  But this is boring. 
+Start up the server and then look at in your preferred browser.
+*/
 var http = require('http');
 
 var options = {
